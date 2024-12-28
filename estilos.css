@@ -1,0 +1,369 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration:solid;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;	
+	background: #f2f2f2;
+}
+
+/* * ============================== */
+/* * ============ HEADER ========== */
+/* * ============================== */
+
+header{
+    height: 500px;
+}
+.fotoTitulo{
+    background-image: url(headertrekking.jpg) ;
+    height: 500px;
+	justify-content: center;
+	background-position: center center;
+	background-size: cover;
+	display: flex;
+  	flex-direction: column;
+
+	
+}
+.menu {
+	background: #FFCD48;
+    position: sticky;
+    top: 0;
+	
+}
+.menu > div > a{
+	font: bold;
+	font-size: 1.5em;
+}
+
+.menu a {
+	color: #fff;
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	transition: .3s ease-out all;
+	z-index:1;
+	font: bold;
+}
+
+.menu a:hover {
+	background: #1D2F3D;
+	color: #fff;
+	text-decoration: none;
+}
+
+.barraInicial {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+.tituloprincipal{
+	text-align: center;
+	font-size: 5vw;
+	min-width: 400px;
+	color: transparent; /* Hacer el texto transparente */
+  	-webkit-text-stroke: 3px rgb(56, 109, 223); /* Establecer el grosor y el color del trazo para navegadores WebKit (Safari, Chrome) */
+  	/*text-stroke: 3px rgb(56, 109, 223); /* Establecer el grosor y el color del trazo para navegadores estándar */
+	margin-bottom: 30px;
+	text-shadow:2px 2px #0971d1;
+	transition: .3s ease-out all;
+
+}
+.tituloprincipal:hover{
+	text-shadow:3px 3px #0971d1;
+}
+
+.subtituloprincipal{
+	position: relative;
+	text-align: center;
+	font-size: 2vw;
+	min-width: 400px;
+	color: rgb(56, 109, 223);
+	-webkit-text-stroke: 1px rgb(56, 109, 223); /* Establecer el grosor y el color del trazo para navegadores WebKit (Safari, Chrome) */
+  	/*text-stroke: 3px rgb(56, 109, 223);*/
+	text-shadow:2px 2px #031d36;
+	transform: rotate(-5deg);
+	z-index: 2;
+	transition: .3s ease-out all;
+}
+.subtituloprincipal:hover{
+	transform: rotate(-4deg);
+}
+/* * ============================== */
+/* * ===== CONTENEDOR IMAGEN ====== */
+/* * ============================== */
+
+.barraInicial-imagen {
+	height: 100vh;
+}
+
+.barraInicial-imagen img {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	object-fit: cover;
+	object-position: 0 bottom;
+}
+
+/* * ============================== */
+/* * ============ MAIN ============ */
+/* * ============================== */
+
+main {
+	min-height: 100vh;
+	margin-top: 5%;
+}
+
+main .contenido p {
+	margin-bottom: 20px;
+	line-height: 30px;
+	color: #525151;
+}
+
+main .contenido .titulo {
+    font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	padding-top: 40px;
+}
+
+main .contenido .fecha {
+	font-size: 14px;
+	color: #B5B5B5;
+}
+
+/* * ============================== */
+/* * ============ ASIDE =========== */
+/* * ============================== */
+
+aside {
+	min-width: 30%;
+	margin: 40px 20px 20px 0;
+	height: 100%;
+	background: #7FB8F1;
+	padding: 20px;
+	border-radius: 3px;
+	float: right;
+	position: sticky;
+	top:20px;
+}
+
+aside .titulo {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #f2f2f2;
+	
+}
+
+aside .indice a {
+	display: block;
+	margin-bottom: 10px;
+	color: #FFCD48;
+}
+
+/* * ============================== */
+/* * ========== FOOTER ============ */
+/* * ============================== */
+
+footer.menu{
+	position: sticky;
+	bottom:0;
+}
+.footerImagen{
+	padding-left: 68%;
+	margin: 0;
+	
+}
+.siluetaSenderista{
+	padding-bottom: 0;
+	position: relative;
+	
+}
+
+.menulegal{
+	display: inline;
+	width: 10%;
+	margin-left: 50%;
+	position: relative;
+	font-size: large;
+	
+}
+.footerContenido{
+	background-color: #FFCD48;
+	display: block;
+	padding-bottom: 10px;
+	min-height: 80px;
+}
+.jadigital{
+	text-align: right;
+	margin-right: 30px;
+	font-size: large;
+}
+
+/* * ============================== */
+/* * ====== MEDIA QUERIES ========= */
+/* * ============================== */
+@media screen and (max-width: 900px){
+	.navbar .contenedor {
+		flex-wrap: wrap;
+		margin: 0;
+		width: 100%;
+	}
+
+	.navbar a {
+		width: auto;
+		flex: 1;
+	}
+
+	.contenedor-imagen {
+		height: 50vh;
+	}
+
+	main .contenedor {
+		flex-direction: column;
+	}
+}
+
+.menulegal{
+	background: #FFCD48;
+    position: sticky;
+    margin-top: 5px;
+	height: 20%;
+	min-height: 80px;
+}
+.menulegal a{
+	color: #fff;
+	margin: auto;
+	margin-left: 20px;
+	width: 100%;
+	text-align: left;
+	color: #000;
+	transition: .3s ease-out all;
+}
+.menulegal a:hover {
+	background: #1D2F3D;
+	color: #fff;
+	text-decoration: none;
+}
+.jadigital h3{
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+	text-align: right;
+	
+}
+/* * ============================== */
+/* * ====== REGISTRO ============== */
+/* * ============================== */
+.formularioregistro{
+    width: 40%;
+    background: #7fb8f1;
+    padding: 30px;
+    margin: auto;
+    margin-top: 70px;
+	margin-bottom: 30px;
+    border-radius: 7px;
+}
+.formularioregistro h2{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.datos{
+    width: 100%;
+    background: #7fb8f1;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    border: 1px solid #288df3;
+    font-size: 18px;
+	transition: .3s ease-out all;
+}
+.datos:hover{
+    border: 1px solid #031d36;
+}
+.boton{
+	min-width: 120px;
+    width: auto;
+    height: 25px;
+    margin-bottom: 20px;
+    background: #288df3;
+	padding: 5px;
+	border-radius: 5px;
+
+
+}
+.boton:hover{
+    background: #7fb8f1;
+}
+.regreso{
+    position: relative;
+    text-align: right;
+    margin-right: 30px;
+}
+.error{
+	color: red;
+}
+.correcto{
+	color: #000;
+}
+/* * ============================== */
+/* * === RECUPERAR CONTRASEÑA ======= */
+/* * ============================== */
+.recuperarcontrasena{
+	margin-top: 65px;
+	width: 40%;
+    background: #7fb8f1;
+    padding: 30px;
+    margin: auto;
+    margin-top: 70px;
+	margin-bottom: 30px;
+    border-radius: 7px;
+	
+	
+}
+/* * ============================== */
+/* * === IDENTIFICACIÓN ======= */
+/* * ============================== */
+.recuperardatos{
+	display: flex;
+	flex-direction: column;
+	margin-left: 60%;
+	
+}
+.resaltar:hover{
+	text-decoration: underline;
+	font-size: 1.01em;
+	transition:.3s ease-out all;
+}
+#iniciar{
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 35px;
+	width: 25%;
+	height: 15%;
+	padding: 5px;
+	font-size: large;
+	border-radius: 5px;
+	transition:.3s ease-out all;
+}
+#iniciar:hover{
+	background-color: #031d36;
+	color:white;
+	font-size: 1.01rem;
+}

@@ -1,0 +1,36 @@
+Copiar
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de etiqueta dialog en HTML</title>
+</head>
+<body>
+
+<button id="mostrarDialogo">Mostrar Diálogo</button>
+
+<dialog id="miDialogo">
+  <p>Este es un cuadro de diálogo simple.</p>
+  <button id="cerrarDialogo">Cerrar</button>
+</dialog>
+
+<script>
+  // Obtener referencias a los elementos
+  var mostrarDialogo = document.getElementById('mostrarDialogo');
+  var miDialogo = document.getElementById('miDialogo');
+  var cerrarDialogo = document.getElementById('cerrarDialogo');
+
+  // Mostrar el diálogo al hacer clic en el botón
+  mostrarDialogo.addEventListener('click', function() {
+    miDialogo.showModal();
+  });
+
+  // Cerrar el diálogo al hacer clic en el botón de cerrar
+  cerrarDialogo.addEventListener('click', function() {
+    miDialogo.close();
+  });
+</script>
+
+</body>
+</html>

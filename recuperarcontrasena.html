@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>recuperar Contraseña</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="barraInicial">
+                <a href="#">Rutas Destacadas</a>
+                <a href="#quienessomos">Quienes somos</a>
+                <a href="#proximasrutas">Próximas Rutas</a>
+                <a href="#consejosenruta">Consejos en Ruta</a>
+            </div>
+            </nav>
+        <div class="fotoTitulo">
+			<a href="index.html">
+				<h1 class="tituloprincipal">Senderismo Parque Alcosa</h1>
+        <h2 class="subtituloprincipal">El Deportista Novato</h2>
+			</a>
+        </div>
+    </header>
+    <section class="recuperarcontrasena">
+        <form id="formRecuperar" action="recuperarcontrasena.php" onsubmit="return enviarInstrucciones();">
+            <label for="email"><h2>Correo Electrónico:</h2></label>
+            <input type="email" id="email" name="email" class="datos" required>
+
+            <h2>Se enviaran al correo electrónico las instrucciones para recuperar la contraseña</h2>
+            <br>
+            <button type="submit" class="boton">Enviar</button>
+          </form>
+          <h2 class="regreso"><a href="index.html">YA ESTOY REGISTRADO</a></h2>
+        
+          <script>
+            function enviarInstrucciones() {
+              var email = document.getElementById('email').value;
+        
+              // Aquí deberías agregar la lógica para enviar instrucciones al correo proporcionado
+              // Puedes simular esto con una alerta por ahora
+              alert('Se enviarán instrucciones de recuperación al correo: ' + email);
+              
+        
+              // Evitar el envío del formulario real
+              return false;
+            }
+          </script>
+    </section>
+    <footer>
+      <div class="footerImagen" id="footerImagen">
+        <img src="trekkingOscuro.png" alt="">
+      </div>
+      <div class="footerContenido">
+        <nav class="menulegal">
+          <div class="barraLegal">
+          <a href="politivadecoocies.html" target="_blank">Politica de cookies</a>
+          <a href="politicadeprivacidad.html" target="_blank">Politica de Privacidad</a>
+          <a href="avisolegal.html" target="_blank">Aviso Legal</a>
+          <a href="formulariodecontacto.html" target="_blank">Contacto</a>
+        </nav>
+        <div>
+          <h3 class="jadigital"><a href="https://www.youtube.com/playlist?list=PL6qh5SOcbwpCgLOl0xquvqK8zcdGyY-tJ" target="_blank" rel="noopener noreferrer">Web creada por JADigital Copyright.Todos los derechos reservados.</a></h3>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

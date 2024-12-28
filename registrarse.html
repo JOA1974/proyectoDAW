@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Registro</title>
+    
+</head>
+<body>
+    <header>
+		<nav class="menu">
+			<div class="barraInicial">
+				<a href="#">Rutas Destacadas</a>
+				<a href="#quienessomos">Quienes somos</a>
+				<a href="#proximasrutas">Próximas Rutas</a>
+				<a href="#consejosenruta">Consejos en Ruta</a>
+			</div>
+		</nav>
+		<div class="fotoTitulo">
+			<a href="index.html">
+				<h1 class="tituloprincipal">Senderismo Parque Alcosa</h1>
+                <h2 class="subtituloprincipal">El Deportista Novato</h2>
+			</a>
+		</div>
+	</header>
+    <section>
+        <form action="registrar.php" method="post" class="formularioregistro">
+            <h2>Formulario de registro</h2>
+                <div>
+                    <label for="nombre">Nombre:*</label>
+                    <input type="text" class="datos" name="nombre" placeholder="Escribe tu nombre" required>
+                    
+                </div>
+                <div>
+                    <label for="apellido1">Primer Apellido:*</label>
+                    <input type="text" class="datos" name="apellido1" placeholder="Escribe tu primer apellido" required>
+                    
+                </div>
+                <div>
+                    <label for="apellido2">Segundo Apellido:</label>
+                    <input type="text" class="datos" name="apellido2" placeholder="Escribe tu segundo apellido" required>
+                    
+                </div>
+                <div>
+                    <label for="dni">DNI.:*</label><cite id="mensajeDni"></cite>
+                    <input type="text" class="datos" name="dni" id="dni" placeholder="Escribe tu dni" required onclick="activarComprobarDni()">
+                    
+                </div>
+                <script>
+                    //Con esta función verificamos dni válido
+                    function comprobarDni() {
+                        // Obtener los valores de los campos
+                        var valorDni=document.getElementById('dni').value;
+                        //Expresión regular DNI
+                        var dniRegex = /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i;
+                        var respuestaDni = document.getElementById('mensajeDni');
+                        // Comparar los valores del DNI incluido y la expresión regular
+                        if (dniRegex.test(valorDni)) { 
+                            // Si no cumple la expresión
+                            document.getElementById('mensajeDni').innerHTML='  ¡DNI válido!';
+                            respuestaDni.classList.add("correcto");
+                        } else {
+                            document.getElementById('mensajeDni').innerHTML='  ¡No es un DNI válido!';
+                            respuestaDni.classList.add("error");
+                            //document.getElementById("mensajeDni").innerHTML = "El DNI no es válido.";
+                            alert('El DNI no es correcto');
+                            document.getElementById('dni').value="";//Tendría que limpiar los campos
+                            
+                        }
+                    }
+                    // Activa la comparación cuando el campo 'dni' obtiene el foco
+                    function activarComprobarDni() {
+                        document.getElementById('dni').addEventListener('blur', comprobarDni);
+                        
+                    }
+                </script>
+
+                <div>
+                    <label for="email">email:*</label>
+                    <input type="email" class="datos" name="email" placeholder="Escribe tu correo electrónico" required>
+                    
+                </div>
+                <div>
+                    <label for="fNacimiento">Fecha de nacimiento:*</label>
+                    <input type="date" class="datos" name="fNacimiento" max="120" min="0" required>
+                </div>   
+                <div>
+                    <label for="direccion">Dirección:*</label>
+                    <input type="text" class="datos" name="direccion" placeholder="Escribe tu dirección" rows="5" required>
+                    
+                </div>
+
+                <div>
+                    <label for="telefono">Teléfono:*</label><cite id="mensajeTelefono">Debe tratarse de un teléfono español, sin el prefijo</cite>
+                    <input type="tel" class="datos" name="telefono" id="telefono" placeholder="Telefono de contacto" required onclick="activarComprobarTelefono()">
+                    
+                </div>
+                <script>
+                    //Con esta función verificamos teléfono válido
+                    function comprobarTelefono() {
+                        // Obtener los valores de los campos
+                        var valorTelefono=document.getElementById('telefono').value;
+                        //Expresión regular teléfono español sin prefijo
+                        var telefonoRegex = /^[679]{1}[0-9]{8}$/;
+                        var respuestaTel = document.getElementById('mensajeTelefono');
+                        // Comparar los valores del teléfono incluido y la expresión regular
+                        if (telefonoRegex.test(valorTelefono)) { 
+                            // Si no cumple la expresión
+                            document.getElementById('mensajeTelefono').innerHTML='  ¡Teléfono válido!';
+                            respuestaTel.classList.add("correcto");
+                        } else {
+                            document.getElementById('mensajeTelefono').innerHTML='  ¡No es un teléfono válido!';
+                            respuestaTel.classList.add("error");
+                            alert('El teléfono no es correcto');
+                            document.getElementById('telefono').value="";//Tendría que limpiar los campos
+                            
+                        }
+                    }
+                    // Activa la comparación cuando el campo 'dni' obtiene el foco
+                    function activarComprobarTelefono() {
+                        document.getElementById('telefono').addEventListener('blur', comprobarTelefono);
+                        
+                    }
+                </script>
+                
+                <div>
+                    <label for="password">Password:*</label>
+                    <input type="password" class="datos" name="password" id="key" placeholder="Contraseña" required>
+                    
+                </div>
+
+                <div>
+                    <label for="password2">Repite tu password:*</label>
+                    <input type="password" class="datos" name="password2" id="key2" placeholder="Repite tu contraseña" required onclick="activarComparacion()">
+                    <cite id="mensaje">Las contraseñas deben coincidir</cite>
+                </div>
+                <script>
+                    //Con esta función verificamos que las contraseñas coinciden
+                    function compararDatos() {
+                        // Obtener los valores de los campos
+                        var campoKey = document.getElementById('key').value;
+                        var campoKey2 = document.getElementById('key2').value;
+                        var respuesta = document.getElementById('mensaje');
+                        // Comparar los valores
+                        if (campoKey === campoKey2) { 
+                            // Si las contraseñas coinciden
+                            document.getElementById('mensaje').innerHTML='¡Las contraseñas coinciden!';
+                            respuesta.classList.add("correcto");
+                        } else {
+                            alert('¡Las contraseñas no coinciden! Por favor, inténtalo de nuevo.');
+                            document.getElementById('key').value="";
+                            document.getElementById('key2').value="";
+                            document.getElementById('mensaje').innerHTML='¡Las contraseñas no coinciden! Por favor, inténtalo de nuevo.';
+                            respuesta.classList.add("error");
+                        }
+                    }
+                    // Activa la comparación cuando el campo 'key2' obtiene el foco
+                    function activarComparacion() {
+                        document.getElementById('key2').addEventListener('blur', compararDatos);
+                        //document.getElementById('key2').onblur = "compararDatos";
+                    }
+                </script>
+                
+                <br>
+                <input type="submit" class="boton" value="Registrarse">
+                <br>
+                <input type="checkbox" id="condiciones" name="condiciones" value="" required>
+                <label for="condiciones">Acepto <a href="aceptacion.html" target="_blank">Términos y condiciones*</a></label>
+                <br>
+                <input type="checkbox" id="politica" name="politica" value="" required>
+                <label for="politica">Acepto <a href="politicadeprivacidad.html" target="_blank">Acepto política de privacidad*</a></label>
+                <h2 class="regreso"><a href="index.html">YA ESTOY REGISTRADO</a></h2>
+                <br>
+                <br>
+                <cite>Requeridos todos los que tengan *</cite>
+            
+
+
+
+        </form>
+
+        
+    </section>
+    
+    <footer>
+		<div class="footerImagen" id="footerImagen">
+			<img src="trekkingOscuro.png" alt="">
+		</div>
+		<div class="footerContenido">
+			<nav class="menulegal">
+				<div class="barraLegal">
+				<a href="politivadecoocies.html" target="_blank">Politica de cookies</a>
+				<a href="politicadeprivacidad.html" target="_blank">Politica de Privacidad</a>
+				<a href="avisolegal.html" target="_blank">Aviso Legal</a>
+				<a href="formulariodecontacto.html" target="_blank">Contacto</a>
+			</nav>
+			<div>
+				<h3 class="jadigital"><a href="https://www.youtube.com/playlist?list=PL6qh5SOcbwpCgLOl0xquvqK8zcdGyY-tJ" target="_blank" rel="noopener noreferrer">Web creada por JADigital Copyright.Todos los derechos reservados.</a></h3>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

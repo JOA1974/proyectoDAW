@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Senderismo Parque Alcosa</title>
+	
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<header>
+		<nav class="menu">
+			<div class="barraInicial">
+				<a href="#">Rutas Destacadas</a>
+				<a href="#quienessomos">Quienes somos</a>
+				<a href="#proximasrutas">Próximas Rutas</a>
+				<a href="#consejosenruta">Consejos en Ruta</a>
+			</div>
+		</nav>
+		<div class="fotoTitulo">
+			<a href="index.html">
+				<h1 class="tituloprincipal">Senderismo Parque Alcosa</h1>
+                <h2 class="subtituloprincipal">El Deportista Novato</h2>
+			</a>
+		</div>
+	</header>
+	<main id="texto">
+		<div class="dividentificador">
+			<aside>
+				<h2>Identificación</h2>
+				<form action="#" method="post">
+					<label for="usuario">Usuario:</label>
+					<input type="text" id="usuario" name="usuario" required placeholder="Usuario de 20 caracteres" maxlength="20" class="datos">
+					<br>
+					<label for="contrasena">Contraseña:</label>
+					<input type="password" id="contrasena" name="contrasena" required placeholder="Escribe tu contraseña" maxlength="8" class="datos">
+					<br>
+					<input type="submit" value="Iniciar sesión" class="boton" id="iniciar">
+
+				</form>
+				<div class="recuperardatos">
+					<p class="resaltar"><b><a href="recuperarcontrasena.html">Recuperar contraseña</a></b></p>
+					<br>
+					<p class="resaltar"><b><a href="registrarse.php">Registrarse</a></b></p>
+				</div>
+			</aside>
+			<div class="ruta">
+				<div class="post">
+					<h1 class="titulo" id="grandesAndalucia">Los picos más grandes de cada provincia</h1>
+					<p class="fecha">Publicado el 4 de Marzo de 2021</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque erat tincidunt hendrerit. Cras lobortis id diam sit amet consectetur. Suspendisse non pulvinar justo, ac commodo velit. Quisque maximus dolor ac magna molestie, sit amet commodo velit congue. Maecenas non dolor ut elit malesuada congue. Phasellus euismod nisi pharetra ante rutrum dignissim. Ut eget tortor ut sapien egestas sollicitudin. Aenean pulvinar varius augue, ac euismod tortor faucibus at. In commodo sodales turpis nec vehicula. Mauris luctus, risus non iaculis porttitor, felis eros sagittis enim, sed ultricies lacus magna quis urna.
+					</p>
+				</div>
+				<div class="post">
+					<h1 class="titulo" id="salidasenbici">Salidas en bici</h1>
+					<p class="fecha">Publicado el 4 de Marzo de 2021</p>
+					<p>
+						Ut sit amet vehicula lectus, nec vestibulum purus. Nulla a nibh magna. Pellentesque commodo commodo sapien eu sagittis. Aenean luctus mauris sit amet quam ornare, eu ultricies nunc auctor. Nulla volutpat purus eu venenatis facilisis. Nulla risus nisl, rhoncus vitae pulvinar nec, viverra eu odio. Duis nisi quam, gravida sed imperdiet sed, viverra fermentum turpis. Cras non iaculis augue, nec scelerisque nibh. Sed auctor dolor mi, sit amet placerat tellus sagittis eu. Curabitur nec luctus dolor. Ut congue rutrum vehicula. Ut viverra tincidunt nunc, vitae cursus nulla scelerisque aliquam.
+					</p>
+				</div>
+				<div class="post">
+					<h1 class="titulo" id="proximasrutas">Proximas rutas</h1>
+					<p class="fecha">Publicado el 4 de Marzo de 2021</p>
+					<p>
+						Aliquam congue nibh in urna porta blandit. Mauris nec mi elit. Duis ligula quam, suscipit nec hendrerit ac, efficitur pulvinar tortor. Quisque venenatis leo ac hendrerit molestie. Quisque malesuada, enim ut feugiat finibus, sem mi faucibus enim, vel rhoncus ante justo in nibh. Duis sit amet ipsum tempus, pellentesque ex sed, mollis erat. Sed metus nibh, tincidunt vel laoreet eget, bibendum at est.
+					</p>
+				</div>
+				<div class="post">
+					<h1 class="titulo" id="consejosenruta">Consejos en ruta</h1>
+					<p class="fecha">Publicado el 4 de Marzo de 2021</p>
+					<p>
+						Nullam ullamcorper tincidunt laoreet. Donec sapien sapien, egestas id justo et, tincidunt accumsan ipsum. Etiam molestie lectus a consectetur condimentum. Donec malesuada at sapien eu viverra. Integer rutrum libero vitae est semper malesuada. Quisque convallis enim et erat aliquam, a facilisis nunc posuere. Nulla ultrices, turpis in pulvinar feugiat, dolor enim interdum mauris, vitae egestas purus orci vel nibh. Aliquam eleifend est ac eleifend dictum. Nunc condimentum tincidunt placerat. Praesent varius ornare quam vitae placerat. Donec justo sapien, pretium vitae vestibulum at, molestie eu ipsum. Proin non turpis eget risus egestas ornare in nec tortor. Sed commodo lectus vitae tortor blandit, id auctor mauris tempus. Aliquam erat volutpat.
+					</p>
+				</div>		
+			</div>
+		</div>
+	</main>
+	<?php
+		include("registrarse.php");
+	?>
+	<footer>
+		<div class="footerImagen" id="footerImagen">
+			<img src="trekkingOscuro.png" alt="">
+		</div>
+		<div>
+			<nav class="menulegal">
+				<div class="barraLegal">
+				<a href="politivadecoocies.html" target="_blank">Politica de cookies</a>
+				<a href="politicadeprivacidad.html" target="_blank">Politica de Privacidad</a>
+				<a href="avisolegal.html" target="_blank">Aviso Legal</a>
+				<a href="formulariodecontacto.html" target="_blank">Contacto</a>
+			</nav>
+			<div>
+				<h3 class="jadigital"><a href="https://www.youtube.com/playlist?list=PL6qh5SOcbwpCgLOl0xquvqK8zcdGyY-tJ" target="_blank" rel="noopener noreferrer">Web creada por JADigital Copyright.Todos los derechos reservados.</a></h3>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

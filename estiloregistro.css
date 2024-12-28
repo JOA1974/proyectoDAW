@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    
+}
+.formularioregistro{
+    width: 40%;
+    background: #7fb8f1;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 7px;
+}
+.formularioregistro h2{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.datos{
+    width: 100%;
+    background: #7fb8f1;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    border: 1px solid #288df3;
+    font-size: 18px;
+}
+.datos:hover{
+    border: 1px solid #031d36;
+}
+.boton{
+    width: 20%;
+    height: 25px;
+    margin-bottom: 20px;
+    background: #288df3;
+
+
+}
+.boton:hover{
+    background: #7fb8f1;
+}
+#regreso{
+    position: relative;
+    text-align: right;
+    margin-right: 30px;
+}
